@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Happy Father's Day, Papa 🦸‍♂️</title>
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+
+  <!-- ✨ Floating background elements -->
+  <div class="bg-elements" id="bgElements"></div>
+
+  <!-- 🏠 Header -->
+  <header class="site-header">
+    <div class="header-stars">⭐ ⭐ ⭐</div>
+    <h1>Happy Father's Day, Papa 🦸‍♂️</h1>
+    <p class="subtitle">Navigate the maze to unlock a special message just for you!</p>
+    <div class="header-stars">⭐ ⭐ ⭐</div>
+  </header>
+
+  <!-- 🕹️ Controls hint -->
+  <div class="controls-hint">
+    <span>⬆️</span><span>⬇️</span><span>⬅️</span><span>➡️</span>
+    <span style="margin-left:10px;">Use arrow keys or WASD to move</span>
+  </div>
+
+  <!-- 🗺️ Maze Section -->
+  <main class="maze-wrapper">
+    <div class="maze-frame">
+      <canvas id="mazeCanvas"></canvas>
+    </div>
+    <div class="maze-legend">
+      <div class="legend-item"><span class="legend-dot start"></span> Start</div>
+      <div class="legend-item"><span class="legend-dot end"></span> 🏆 Goal</div>
+    </div>
+    <button class="btn-reset" onclick="resetMaze()">🔄 Restart Maze</button>
+  </main>
+
+  <!-- 🎉 Win Popup -->
+  <div class="overlay" id="overlay"></div>
+  <div class="popup" id="popup">
+    <button class="popup-close" onclick="closePopup()">✕</button>
+    <div class="popup-stars">🌟 🌟 🌟</div>
+    <h2>Yay 🎉</h2>
+    <div class="quotes-container" id="quotesContainer">
+      <!-- Quotes injected by JS -->
+    </div>
+    <div class="balloons-section">
+      <h3>🎈 Pop the balloons for a surprise! 🎈</h3>
+      <div class="balloons-row" id="balloonsRow">
+        <!-- Balloons injected by JS -->
+      </div>
+    </div>
+  </div>
+
+  <script src="js/config.js"></script>
+  <script src="js/maze.js"></script>
+  <script src="js/balloons.js"></script>
+  <script src="js/app.js"></script>
+  <!-- 😱 Caught by monster screen -->
+<div class="caught-overlay" id="caughtOverlay">
+  <div class="caught-box">
+    <div class="caught-monster">👾</div>
+    <h2>Oh no! The monster got you!</h2>
+    <p>Restarting the maze...</p>
+  </div>
+</div>
+</body>
+</html>
